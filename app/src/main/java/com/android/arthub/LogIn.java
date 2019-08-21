@@ -88,9 +88,9 @@ public class LogIn extends AppCompatActivity {
             String name = nameView.getText().toString();
             check=false;
             ok=false;
-            //Intent intent = new Intent(this, Menu.class);
-            //intent.putExtra(Menu.EXTRA_MESSAGE, name);
-            //startActivity(intent);
+            Intent intent = new Intent(this, Menu.class);
+            intent.putExtra(Menu.EXTRA_MESSAGE, name);
+            startActivity(intent);
         } else {
             TextView errorView = (TextView) findViewById(R.id.error);
             errorView.setText("Wrong username or password");
