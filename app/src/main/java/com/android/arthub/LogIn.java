@@ -88,8 +88,8 @@ public class LogIn extends AppCompatActivity {
             String name = nameView.getText().toString();
             check=false;
             ok=false;
-            Intent intent = new Intent(this, Menu.class);
-            intent.putExtra(Menu.EXTRA_MESSAGE, name);
+            Intent intent = new Intent(this, MainActivity.class);
+            //intent.putExtra(MainActivity.EXTRA_MESSAGE, name);
             startActivity(intent);
         } else {
             TextView errorView = (TextView) findViewById(R.id.error);
