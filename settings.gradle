@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':mysql-connector-java-5.1.46'
 rootProject.name='ArtHub'
