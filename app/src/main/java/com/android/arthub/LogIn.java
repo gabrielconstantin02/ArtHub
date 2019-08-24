@@ -98,7 +98,7 @@ public class LogIn extends AppCompatActivity {
             ok=false;
         }
     }
-    public void onSignup(View view) {                                ///Logiini button
+    public void onSignup(View view) {                                ///Login button
         Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }
