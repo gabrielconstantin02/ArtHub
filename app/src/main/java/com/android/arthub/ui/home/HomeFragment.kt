@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.android.arthub.R
+import com.squareup.picasso.Picasso
 
 class HomeFragment : Fragment() {
 
@@ -26,6 +28,23 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(this, Observer {
             textView.text = it
         })
+        val imageView: ImageView = root.findViewById(R.id.imageView)
+        Picasso.get()
+            .load("https://imgur.com/Kmm6TIk.jpg")
+//            .resize(50,50)
+            .placeholder(R.drawable.ic_star)
+            .error(R.drawable.ic_tv)
+            .into(imageView, object: com.squareup.picasso.Callback {
+                override fun onSuccess() {
+                    //set animations here
+
+                }
+
+                override fun onError(ex:Exception) {
+                    ex.printStackTrace()
+                    //do smth when there is picture loading error
+                }
+            })
         return root
     }
 }
