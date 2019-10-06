@@ -1,5 +1,6 @@
 package com.android.arthub
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
@@ -15,6 +16,12 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
+import androidx.core.app.ComponentActivity
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
+
 
 class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
 
@@ -59,10 +66,13 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         val id = item.itemId
         var fragment: Fragment? = null
         val intent = Intent(this, MainActivity::class.java)
+        for (fragment in supportFragmentManager.fragments) {
+            supportFragmentManager.beginTransaction().remove(fragment).commit()
+        }
         when (id) {
             R.id.nav_interests -> fragment = InterestsFragment()
             R.id.nav_about -> fragment = AboutFragment()
-            R.id.nav_trash -> fragment = FavoriteCharacterFragment()
+            R.id.nav_watched -> fragment = FavoriteCharacterFragment()
             else -> {
                 val navView: BottomNavigationView = findViewById(R.id.nav_view)
 

@@ -7,8 +7,7 @@
     <string name="user_name">art@hub.com</string>
     <string name="nav_interests">Interests</string>
     <string name="nav_about">About you</string>
-    <string name="nav_watched">Watched Anime</string>
-    <string name="nav_favorite_character">Favorite Character</string>
+    <string name="nav_watched">Upload</string>
     <string name="nav_support">Support</string>
     <string name="nav_help">Help</string>
     <string name="nav_feedback">Give us feedback</string>
