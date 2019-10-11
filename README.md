@@ -1,6 +1,6 @@
 # ArtHub
 
-**ArtHub** is a free,modern and light-weight android application designed for photo enthusiasts to shar thei creations and rate other's.
+**ArtHub** is a free,modern and light-weight android application designed for photo enthusiasts to share their creations and rate other's.
 
 ### Features
 
