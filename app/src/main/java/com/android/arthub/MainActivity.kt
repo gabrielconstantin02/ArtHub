@@ -20,8 +20,11 @@ import androidx.core.app.ComponentActivity
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
-
+import android.util.Log
+import android.view.View
+import android.widget.ImageView
+import com.android.arthub.OnSwipeTouchListener
+import com.android.arthub.R
 
 class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
 
